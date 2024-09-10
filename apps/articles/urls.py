@@ -1,7 +1,7 @@
 from rest_framework import routers
-from .api import ArticleViewSet
+from .api import PostViewSet
 
 router = routers.DefaultRouter()
 
-router.register("api/articles", ArticleViewSet, "articles")
+router.register("api/posts", PostViewSet, "posts")
 urlpatterns = router.urls

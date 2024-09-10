@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from apps.accounts import User
+from apps.accounts.models import User
 
 
 class Category(models.Model):

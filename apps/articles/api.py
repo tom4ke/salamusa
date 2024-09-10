@@ -1,10 +1,10 @@
-from .models import Article
+from .models import Post
 from rest_framework import viewsets, permissions
-from .serializers import ArticleSerializer
+from .serializers import PostSerializer
 
 
-# Article Viewset
-class ArticleViewSet(viewsets.ModelViewSet):
-    queryset = Article.objects.all()
+# Post Viewset
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
     permission_classes = [permissions.AllowAny]
-    serializer_class = ArticleSerializer
+    serializer_class = PostSerializer

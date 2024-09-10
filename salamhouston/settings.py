@@ -25,15 +25,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "apps.accounts",
-    "apps.articles",
+    "apps.accounts.apps.AccountsConfig",
+    "apps.articles.apps.ArticlesConfig",
     "rest_framework",
-    "dj_rest_auth",
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "allauth.socialaccount.providers.google",
-    "dj_rest_auth.registration",
 ]
 
 AUTH_USER_MODEL = "accounts.User"
@@ -43,25 +37,25 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 1
+# SITE_ID = 1
 
-REST_USE_JWT = True
+# REST_USE_JWT = True
 
-SOCIALACCOUNT_PROVIDERS = {
-    "google": {
-        "APP": {
-            "client_id": "976181302379-bqome8vohp24jk883907ho176hk6g7fb.apps.googleusercontent.com",
-            "secret": "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",
-            "key": "",
-        }
-    }
-}
+# SOCIALACCOUNT_PROVIDERS = {
+#     "google": {
+#         "APP": {
+#             "client_id": "976181302379-bqome8vohp24jk883907ho176hk6g7fb.apps.googleusercontent.com",
+#             "secret": "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",
+#             "key": "",
+#         }
+#     }
+# }
 
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "dj_rest_auth.jwt_auth.JWTCookieAuthentication",
-    ),
-}
+# REST_FRAMEWORK = {
+#     "DEFAULT_AUTHENTICATION_CLASSES": (
+#         "dj_rest_auth.jwt_auth.JWTCookieAuthentication",
+#     ),
+# }
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
